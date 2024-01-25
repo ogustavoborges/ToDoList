@@ -2,6 +2,7 @@ body{
   transition: background-color 0.5s;
   color: rgb(0, 0, 0);
   font-weight: bold;
+  background: url('');
 }
 
 .error {
@@ -9,8 +10,11 @@ body{
   font-size: 12px;
 }
 
-.dark {
+.dark-background {
   background-color: #333;
+}
+
+.dark-color{
   color: #fff;
 }
 

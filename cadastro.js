@@ -3,23 +3,27 @@ const inputs = document.querySelectorAll("input");
 const hora = document.getElementById('hora');
 const data = document.getElementById('data');
 const botaoTema = document.getElementById('themeIcon');
+const cabecalho = document.getElementById('cabecalho');
+const body = document.body;
+
 
 function changeTheme() {
-    const body = document.body;
-    body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
 
-       botaoTema.classList.remove('bi-moon-stars-fill')
-       botaoTema.classList.add('bi-brightness-high-fill')
-       botaoTema.style.color = '#212529'
-       botaoTema.style.backgroundColor = '#fff'
+    body.classList.toggle("dark-background");
+    cabecalho.classList.toggle('dark-color');
+
+    if(body.classList.contains("dark-background")){
+        botaoTema.classList.remove('bi-moon-stars-fill')
+        botaoTema.classList.add('bi-brightness-high-fill')
+        botaoTema.style.color = '#212529'
+        botaoTema.style.backgroundColor = '#fff'
     }else{
-       botaoTema.classList.add('bi-moon-stars-fill')
-       botaoTema.classList.remove('bi-brightness-high-fill')
-       botaoTema.style.color = '#fff'
-       botaoTema.style.backgroundColor = '#212529'
+        botaoTema.classList.add('bi-moon-stars-fill')
+        botaoTema.classList.remove('bi-brightness-high-fill')
+        botaoTema.style.color = '#fff'
+        botaoTema.style.backgroundColor = '#212529'
     }
-  }
+}
 
 // --------------------- DATA E HORA   ---------------------
 
