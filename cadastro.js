@@ -6,6 +6,8 @@ const botaoTema = document.getElementById('themeIcon');
 const cabecalho = document.getElementById('cabecalho');
 const body = document.body;
 
+const meuStorage = localStorage;
+
 
 function changeTheme() {
 
@@ -13,15 +15,20 @@ function changeTheme() {
     cabecalho.classList.toggle('dark-color');
 
     if(body.classList.contains("dark-background")){
-        botaoTema.classList.remove('bi-moon-stars-fill')
-        botaoTema.classList.add('bi-brightness-high-fill')
-        botaoTema.style.color = '#212529'
-        botaoTema.style.backgroundColor = '#fff'
-    }else{
-        botaoTema.classList.add('bi-moon-stars-fill')
+        cabecalho.style.color = "#212529"
         botaoTema.classList.remove('bi-brightness-high-fill')
-        botaoTema.style.color = '#fff'
-        botaoTema.style.backgroundColor = '#212529'
+        botaoTema.classList.add('bi-moon-stars-fill')
+        botaoTema.style.color = "#212529"
+        botaoTema.style.backgroundColor = "#fff"
+     
+        body.style.background = "url('./imgs/fundo-claro.svg') center center/cover no-repeat";
+    }else{
+        body.style.background = "linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url('./imgs/fundo-escuro.svg') center center/cover no-repeat";
+        cabecalho.style.color = "#fff"
+        botaoTema.style.color = "#fff"
+        botaoTema.style.backgroundColor = "#212529"
+        botaoTema.classList.add('bi-brightness-high-fill')
+        botaoTema.classList.remove('bi-moon-stars-fill')
     }
 }
 
@@ -59,7 +66,7 @@ form.addEventListener("submit", (event) => {
     const title = document.getElementById("title").value;
     const category = document.getElementById("category").value;
     const time = document.getElementById("time").value;
-
+    
     const task = {
         title,
         category,
@@ -148,10 +155,10 @@ function getTaskById(id) {
 }
 
 function setFormData(task) {
-    document.getElementById("title").value = task.title;
+        document.getElementById("title").value = task.title;
     document.getElementById("category").value = task.category;
     document.getElementById("time").value = task.time;
-}
+    }
 
 function createTask(task) {
     save(task)

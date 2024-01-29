@@ -1,8 +1,14 @@
 body{
-  transition: background-color 0.5s;
+  transition: background-image 0.5s;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  background: url('');
+  background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url('./imgs/fundo-escuro.svg') center center/cover no-repeat;
+  height: 100vh;
+
+}
+
+#cabecalho{
+  color: white;
 }
 
 .error {
@@ -15,7 +21,7 @@ body{
 }
 
 .dark-color{
-  color: #fff;
+  color: #333;
 }
 
 .tema{
