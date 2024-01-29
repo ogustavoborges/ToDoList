@@ -163,7 +163,7 @@ function setFormData(task) {
 function createTask(task) {
     save(task)
     .then(() => {
-        window.location.href = "./tarefas.html";
+        window.location.href = "./index.html";
     })
     .catch((error) => {
         console.error("Erro ao adicionar tarefa", error);
@@ -174,7 +174,7 @@ function updateTask(task) {
     update(task, taskId)
     .then(() => {
         taskId = null;
-        window.location.href = "./tarefas.html";
+        window.location.href = "./index.html";
     })
     .catch((error) => {
         console.error("Erro ao editar tarefa", error);
