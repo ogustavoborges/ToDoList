@@ -1,4 +1,4 @@
-const key = "46de388de73a4b13b587249d4efc25b9";
+const key = "39f82680b1f54b9c80c7984dd249467a";
 const apiUrl = `https://crudcrud.com/api/${key}/tasks`;
 
 async function findAll() {
